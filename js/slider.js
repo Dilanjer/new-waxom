@@ -47,8 +47,6 @@ class Slider {
         }
       } else {
         if (this.slider != null) {
-          this.prevBtn.style.display = "none";
-          this.nextBtn.style.display = "none";
           setInterval(this.autoSlide.bind(_this), this.autoModeSpeed);
         }
       }

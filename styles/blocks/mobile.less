@@ -1,0 +1,46 @@
+// main: ../style.less
+
+.mobile {
+  .mobile__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .mobile__iphone {
+      max-width: 100%;
+    }
+    .mobile__content {
+      max-width: 665px;
+      .mobile__title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: @greey;
+        margin-bottom: 30px;
+      }
+      .mobile_subtitle {
+        font-weight: 300;
+        font-size: 1rem;
+        color: @light-greey;
+        margin-bottom: 30px;
+        line-height: 20px;
+      }
+      .mobile__items {
+          list-style: none;
+          .mobile__item {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 0;
+            padding-left: 20px;
+            font-weight: 300;
+            font-size: 1rem;
+            color: @light-greey;
+            img {
+              margin-right: 25px;
+            }
+          }
+      }
+    }
+  }
+}

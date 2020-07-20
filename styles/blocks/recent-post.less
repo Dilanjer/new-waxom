@@ -1,0 +1,125 @@
+// main: ../style.less
+
+.post__inner {
+  .post__arrows {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    .left, .right {
+      svg {
+        margin: 5px;
+        path {
+          fill: lighten(@light-greey, 20%);
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        svg {
+          margin: 5px;
+          path {
+            fill: @light-brown;
+          }
+        }
+      }
+    }
+  }
+}
+.post__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+.post__item {
+  position: relative;
+  border: 1px solid lighten(@light-greey, 40%);
+  max-width: 370px;
+  margin: 15px;
+  &:after {
+    position: absolute;
+    transition: opacity 0.12s linear;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0;
+  }
+  .post__img {
+    width: 100%;
+  }
+  .post_content {
+    position: relative;
+    background-color: @white-l;
+    padding: 30px;
+    z-index: 2;
+    transition: @background-color-hover-effetc, @color-hover-effetc;
+    transform: translateY(-4px);
+  }
+  .post__title {
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: @greey;
+    font-size: 1.3rem;
+    padding-bottom: 8px;
+  }
+  .post__text {
+    color: @light-greey;
+    font-size: 0.93rem;
+    opacity: 0.8;
+    padding-bottom: 20px;
+
+  }
+  .post__date {
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: @white;
+    z-index: 2;
+    .day {
+      padding: 7px 10px;
+      background-color: #363636;
+      font-size: 2rem;
+      transition: @background-color-hover-effetc;
+    }
+    .month {
+      background-color: #252525;
+      padding: 5px 10px;
+      transition: @background-color-hover-effetc;
+    }
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.3;
+    }
+    .post_content {
+      background-color: @dark-brown;
+    }
+    .post__title {
+      color: @light-brown;
+    }
+    .post__text {
+      color: @white;
+    }
+    .post__date {
+      color: @white;
+      .day {
+        background-color: @light-brown;
+      }
+      .month {
+        background-color: #a48d72;
+      }
+    }
+  }
+}

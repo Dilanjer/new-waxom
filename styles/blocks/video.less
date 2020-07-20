@@ -1,0 +1,40 @@
+// main: ../style.less
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .video__bg{
+    width: 100%;
+  }
+
+  .video__inner{
+    text-align: center;
+
+    .video__content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      transform: translate3d(-50%, -50%, 0);
+      .video__play {
+        img {
+          width: 70px;
+        }
+      }
+      .video__title {
+        color: @white;
+        font-weight: 500;
+      }
+      .video__subtitle {
+        max-width: 560px;
+        color: @white;
+        letter-spacing: 1px;
+      }
+      .video__time {
+        color: @light-brown;
+        font-weight: 600;
+      }
+    }
+  }
+}

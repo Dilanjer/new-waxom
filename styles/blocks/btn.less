@@ -7,7 +7,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 0.93rem;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 15px 30px;
   border-radius: 5px;
   box-shadow: 0 4px 0 #736357;
@@ -40,6 +40,34 @@
     &.active {
       background-color: @brown;
       color: @white;
+    }
+  }
+  &.bg-none {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    font-weight: 300;
+    text-transform: unset;
+    color: @light-brown;
+    padding: 0;
+
+    .tringale {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 4px 0 4px 5px;
+      border-color: transparent transparent transparent @light-brown;
+      transition: border-color 0.12s linear;
+    }
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+      color: darken(@btn-background-darken, 2%);
+      .tringale {
+        border-color: transparent transparent transparent darken(@btn-background-darken, 5%);
+      }
     }
   }
 }

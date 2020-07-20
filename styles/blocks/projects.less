@@ -20,7 +20,6 @@
 
 .project__item {
   position: relative;
-  min-height: 330px;
   max-width: 350px;
   margin: 15px;
   &:after {
@@ -37,16 +36,17 @@
   }
 
   img {
-    max-width: 350px;
+    max-width: 100%;
   }
   .project__content {
-    position: absolute;
+    position: relative;
     z-index: 2;
     bottom: 0;
     width: 100%;
     padding: 30px;
     background-color: @white-l;
     transition: @background-color-hover-effetc, @color-hover-effetc;
+    transform: translateY(-3px);
               
     .project__triangle {
       width: 0;

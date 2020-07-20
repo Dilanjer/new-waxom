@@ -1,0 +1,43 @@
+// main: ../style.less 
+
+.counters__items {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.conunters__item {
+  text-align: center;
+  position: relative;
+  margin: 30px 25px;
+  padding-bottom: 20px;
+  img {
+    margin-bottom: 10px;
+  }
+  .count {
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: @white;
+    margin-bottom: 10px;
+  }
+  .text {
+    font-size: 0.93rem;
+    font-weight: 300;
+    color: @light-brown;
+    text-transform: uppercase;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background-color: @white;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
