@@ -1,0 +1,130 @@
+// main: ../style.less
+.projects__inner {
+  text-align: center;
+}
+.projects__categories {
+  text-align: center;
+  .btn {
+    margin-right: 12px;
+  }
+}
+.project__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.project__item {
+  position: relative;
+  min-height: 330px;
+  max-width: 350px;
+  margin: 15px;
+  &:after {
+    position: absolute;
+    transition: opacity 0.12s linear;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0;
+  }
+
+  img {
+    max-width: 350px;
+  }
+  .project__content {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: @white-l;
+    transition: @background-color-hover-effetc, @color-hover-effetc;
+              
+    .project__triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 15px 20px 15px;
+      border-color: transparent transparent @white-l transparent;
+      transition: border-color 0.12s linear;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+    }
+    .project__name {
+      font-weight: 500;
+      font-family: 'Raleway', sans-serif;
+      color: @light-brown;
+      font-size: 1.3rem;
+      padding-bottom: 8px;
+    }
+    .project__category {
+      color: @light-greey;
+      font-size: 0.93rem;
+      opacity: 0.8;
+    }
+    .project__name, .project__category {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+  }
+  .project__links {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate3d(-50%, -30%, 0);
+    z-index: 2;
+    opacity: 0;
+
+    .lupa, .link {
+      display: inline-block;
+      margin-right: 20px;
+      svg {
+        width: 24px;
+        path {
+          fill: #fff;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          path {
+            fill: @light-brown;
+          }
+            
+        }
+      }
+    }
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.3;
+    }
+    .project__content {
+      background-color: @dark-brown;
+      .project__triangle {
+        border-color: transparent transparent @dark-brown transparent;
+      }
+      .project__name {
+        color: @white;
+      }
+      .project__category {
+        color: @light-brown;
+      }
+    }
+    .project__links {
+      opacity: 1;
+    }
+  }
+}
