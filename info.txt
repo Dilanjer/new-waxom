@@ -1,0 +1,43 @@
+- VS Code Extensions
+  - Autoprefixer v3.0.1
+  - Easy LESS v1.6.3 
+  - Live Server v5.6.1
+
+- Extensions Settings
+  - Easy LESS
+    - (old) "autoprefixer": "> 0.5%, last 2 versions, Firefox ESR, not dead"
+    - "autoprefixer": "> 0.5%, last 4 versions"
+  - Autoprefixer
+    - default
+  - Live Server
+    - default
+
+- CSS Methodology
+  - BEM
+
+
+- Instruction for my slider
+  - 1. connect Slider.js to the end of index.html
+  - 2. Initialize a new slider
+    - example <-- let or const slider (or another name) = new Slider({}).sliderInit(); -->
+  - 3. Set slider options
+   - example <--
+      (this default options)
+
+      let slider = new Slider({
+        sliderClassName: "intro",
+        leftArrowClassName: "left-arrow",
+        rightArrowClassName: "right-arrow",
+        sliderContainerClassName: "slider__indicators",
+        sliderDotClassName: "intro-slider-dot",
+        autoMode: false,
+        autoModeSpeed = 4000,
+        sliderDot: true,
+        fadeOutSpeed: 400, 
+        sliderimageUrls: [
+          "path to your slide pictures",
+        - example <--  "img/slider-image/first-slide.jpg" -->
+        ],
+      }).sliderInit();
+      -->
+  - 4. Enjoy :)

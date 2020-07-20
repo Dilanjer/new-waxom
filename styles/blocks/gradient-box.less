@@ -1,0 +1,30 @@
+// main: ../style.less
+.gradient-box {
+  background-image: @brown-gradient;
+  width: 100%;
+  .gradient-box__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+
+    .content {
+      .title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 1.86rem;
+        color: @white;
+        .title-inner {
+          color: @light-brown;
+        }
+      }
+      .subtitle {
+        font-family: "Montserrat", sans-serif;
+        color: @greey;
+        opacity: 0.7;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
