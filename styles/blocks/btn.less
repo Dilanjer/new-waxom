@@ -66,7 +66,36 @@
     &:hover {
       color: darken(@btn-background-darken, 2%);
       .tringale {
-        border-color: transparent transparent transparent darken(@btn-background-darken, 5%);
+        border-color: transparent transparent transparent darken(@btn-background-darken, 2%);
+      }
+    }
+  }
+
+  &.bg-none-w {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    font-weight: 300;
+    text-transform: unset;
+    color: @white;
+    padding: 0;
+    margin-top: 20px;
+    .tringale {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 4px 0 4px 5px;
+      border-color: transparent transparent transparent @white;
+      transition: border-color 0.12s linear;
+    }
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+      color: darken(@btn-background-darken, 1%);
+      .tringale {
+        border-color: transparent transparent transparent darken(@btn-background-darken, 1%);
       }
     }
   }

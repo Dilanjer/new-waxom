@@ -19,6 +19,7 @@
 @import "blocks/recent-post.less";
 @import "blocks/partnes.less";
 @import "blocks/footer.less";
+@import "blocks/burger-menu.less";
 
 // variables
 @import "variables.less";
@@ -28,6 +29,15 @@
 @media screen and (max-width: 962px) {
   .header {
     padding-top: 2rem;
+    .header__inner {
+      svg {
+        display: block;
+      }
+    
+      .burger__search{
+        display: block;
+      }
+    }
   }
   .nav {
     display: none;
@@ -40,7 +50,13 @@
         }
       }
   }
+
+  .company__name {
+    display: none;
+  }
 }
+
+
 
 @media screen and (max-width: 810px) {
   html {
@@ -114,5 +130,15 @@
   }
   .inner-border-bottom {
     padding-bottom: 30px;
+  }
+
+  .partnes {
+    .partnes__inner {
+      padding: 20px;
+     .partnes__img {
+       max-width: 100px;
+       margin: 10px;
+     }
+    }
   }
 }
