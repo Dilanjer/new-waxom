@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
 
-    .left, .right {
+    .post__left, .post__right {
       svg {
         margin: 5px;
         path {
@@ -27,15 +27,19 @@
     }
   }
 }
-.post__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
+.post__container {
+  width: 100%;
+  margin: auto;
 
 }
+.post__items {
+  display: -webkit-box;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
 .post__item {
+  transform: translateX(0);
   position: relative;
   border: 1px solid lighten(@light-greey, 40%);
   max-width: 370px;
